@@ -1,0 +1,17 @@
+:root, [data-theme='dark'] {
+  --bg: #17191d; --surface: #202328; --surface-2: #292d33; --border: #42474f;
+  --text: #f8f2e9; --muted: #aaa9a4; --accent: #ff765f; --accent-strong: #ff9a73;
+  --accent-ink: #281616; --danger: #ffaaa0; --shadow: rgba(0, 0, 0, .28);
+}
+[data-theme='light'] {
+  --bg: #f6f0e7; --surface: #fffdf9; --surface-2: #f0e8dd; --border: #ded2c2;
+  --text: #22252b; --muted: #78746d; --accent: #e85d4a; --accent-strong: #bf4034;
+  --accent-ink: #fffaf4; --danger: #a9322a; --shadow: rgba(72, 50, 30, .1);
+}
+* { box-sizing: border-box; margin: 0; }
+html { background: var(--bg); }
+body { font-family: 'DM Sans', 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh;
+  background-image: linear-gradient(135deg, rgba(232, 93, 74, .1), transparent 34%), radial-gradient(circle at 90% 0%, rgba(44, 76, 107, .12), transparent 28%); transition: background .3s, color .3s; }
+body::before { content: ''; position: fixed; inset: 0; pointer-events: none; opacity: .22; background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px); background-size: 40px 40px; mask-image: linear-gradient(to bottom, black, transparent 70%); }
+a { color: var(--accent-strong); text-decoration: none } a:hover { text-decoration: underline }
+button, input { font: inherit }
